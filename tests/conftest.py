@@ -2,7 +2,7 @@ import pytest
 import logging
 from appium.options.android import UiAutomator2Options
 from appium import webdriver
-from Pages.homesmartscreen import HomeSmartScreen
+from pages.homesmartscreen import HomeSmartScreen
 
 @pytest.fixture(scope="class")
 def android(request):
