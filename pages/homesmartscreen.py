@@ -1,5 +1,5 @@
 from appium.webdriver.common.appiumby import AppiumBy
-from Pages.basepage import BasePage
+from pages.basepage import BasePage
 
 
 class HomeSmartScreen(BasePage):
