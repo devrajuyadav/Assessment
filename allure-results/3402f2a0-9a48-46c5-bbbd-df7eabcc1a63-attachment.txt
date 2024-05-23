@@ -1,0 +1,2 @@
+[32mINFO    [0m root:conftest.py:23 Attempting to connect to Appium server at http://192.168.1.214:4273/wd/hub
+[32mINFO    [0m root:conftest.py:25 Successfully connected to Appium server
