@@ -33,9 +33,8 @@ pip install pytest
 * Android Developer options 
 [https://developer.android.com/studio/debug/dev-options]
 * Connect your Android device through USB and verify the adb    
-* Execute tests `cd <your_repo_path>/`
+* Execute tests : Go to the project folder
 * Clone this repository `https://github.com/devrajuyadav/Assessment.git`
 * Execute `pytest --alluredir=allure-results` This will run all the test cases and create a allure-results folder with the test result>
-* To generate allure report
-* Execute `pytest generate allure-results -o allure-report`
-* Show the report: Execute `allure serve allure-results`
+* To generate allure report Run `pytest generate allure-results -o allure-report`
+* Show the report: Run `allure serve allure-results`
