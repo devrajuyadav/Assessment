@@ -3,7 +3,7 @@ from selenium.common import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-class BasePage:
+class CommonFunctions:
 
     def __init__(self, driver):
         self.driver = driver

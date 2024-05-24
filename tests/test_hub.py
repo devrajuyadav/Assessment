@@ -41,6 +41,7 @@ class TestHubTesting:
     def test_terms_conditions(self, android, ikea_hub):
         assert not ikea_hub.verify_accept_enabled(), ("Terms and conditions : Accept button should not"
                                                       "be enabled until user has gone through the T&C")
+        # there is an arrow button, which when clicked will take to the last and buttons will be enabled
         ikea_hub.scroll_end(6)
         assert ikea_hub.verify_accept_enabled(), "T&C : Accept button should be enabled"
 
@@ -49,7 +50,7 @@ class TestHubTesting:
 
     @pytest.mark.sixth
     def test_explore_app(self, android, ikea_hub):
-        ikea_hub.scroll_end(2)
+        ikea_hub.scroll_end(3)
         assert ikea_hub.verify_explore_apps_text() == ikea_hub.expected_explore_app_text
         # Query : only the arrow is clickable here !! any specific reason
         ikea_hub.tap_explore_button_arrow()

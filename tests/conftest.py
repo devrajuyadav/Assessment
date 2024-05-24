@@ -4,6 +4,7 @@ from appium.options.android import UiAutomator2Options
 from appium import webdriver
 from pages.homesmartscreen import HomeSmartScreen
 
+
 @pytest.fixture(scope="class")
 def android(request):
     caps = {
@@ -32,6 +33,11 @@ def android(request):
     driver.quit()
 
 
+@pytest.fixture(scope="class")
+def ikea_hub(android):
+    return HomeSmartScreen(android)
+
+
 def pytest_configure(config):
     config._metadata = {
         'Platform': 'Windows',
@@ -47,8 +53,3 @@ def pytest_runtest_logreport(report):
             logging.error(f"Test failed: {report.nodeid}")
         elif report.passed:
             logging.info(f"Test passed: {report.nodeid}")
-
-
-@pytest.fixture(scope="class")
-def ikea_hub(android):
-    return HomeSmartScreen(android)
